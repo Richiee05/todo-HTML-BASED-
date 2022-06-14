@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="light bg-gray-50">
+    <main class="dark:bg-slate-900 min-h-screen w-full">
+      <div
+        class="bg-no-repeat bg-cover py-16 bg-[url('../images/bg-desktop-light.jpg')] bg-theme dark:bg-[url('../images/bg-desktop-dark.jpg')]"
+      >
+        <div
+          class="mx-auto w-10/12 md:w-5/12 flex justify-between items-center mb-6"
+        >
+          <h1
+            class="text-white tracking-widest uppercase font-semibold text-3xl"
+          >
+            T O D O
+          </h1>
+          <img src="../images/icon-sun.svg" class="h-5 w-5 theme-icon" alt="" />
+        </div>
+        <form
+          action=""
+          class="form w-10/12 md:w-5/12 block mx-auto bg-slate-800"
+        >
+          <input
+            type="text"
+            name="todo-item"
+            id="todo-input"
+            placeholder="Create a new todo..."
+            class="input dark:bg-slate-800 bg-white w-full p-2 rounded focus-within:border-0 outline-none ring-0 focus:border-0 border-hidden cursor-text dark:text-gray-100"
+          />
+        </form>
+      </div>
+      <div
+        id="items"
+        class="container rounded bg-white w-10/12 md:w-5/12 mx-auto relative bottom-8 shadow-2xl drop-shadow-2xl"
+      >
+        <ul class="todo-container dark:text-gray-200 dark:bg-slate-800"></ul>
+
+        <div
+          class="hover:cursor-pointer relative dark:bg-slate-800 flex justify-between items-center py-3 px-2"
+        >
+          <h5 class="text-sm font-semibold text-gray-400 px-5">
+            <span class="todo-no">5</span> items left
+          </h5>
+          <div
+            class="flex dark:bg-slate-800 justify-center items-center absolute top-14 right-1 left-1 rounded bg-white py-3 w-12/12 lg:relative lg:top-0 lg:left-0 lg:right-0 lg:py-0 lg:w-auto lg:rounded-none lg:bg-transparent"
+          >
+            <h5
+              onclick="getAllItems()"
+              class="showAll text-sm font-semibold text-gray-400 mr-3 hover:text-black active:text-blue-600 dark:hover:text-white"
+            >
+              All
+            </h5>
+            <h5
+              onclick="getActiveItems()"
+              class="showActive text-sm font-semibold text-gray-400 mr-3 hover:text-black dark:hover:text-white"
+            >
+              Active
+            </h5>
+            <h5
+              onclick="getCompletedItems()"
+              class="showCompleted text-sm font-semibold text-gray-400 mr-3 hover:text-black dark:hover:text-white"
+            >
+              Completed
+            </h5>
+          </div>
+          <h5
+            onclick="clearCompletedItems()"
+            class="clearCompleted text-sm font-semibold text-gray-400 mr-3 dark:hover:text-white"
+          >
+            Clear Completed
+          </h5>
+        </div>
+      </div>
+
+      <!-- Add dynamic number -->
+      <p class="mx-auto mt-10 container text-center">
+        Drag and drop to reorder list
+      </p>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </main>
+  </body>
+</html>
