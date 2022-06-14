@@ -47,10 +47,10 @@ function createTodoItem(input) {
   const divTaskLi = divTask.appendChild(document.createElement("li"));
   divTaskLi.classList = "flex justify-start items-center ";
   divTaskLi.innerHTML = `  <span  class="rounded-full p-2 w-6 h-6 border-[1px] dark:border-gray-400 mr-4 dark:border-opacity-10">
-    <img class="bg-transparent w-full h-2 hidden" src="../todo-app-main/images/icon-check.svg" alt=""/></span>${input.value}`;
+    <img class="bg-transparent w-full h-2 hidden" src="../images/icon-check.svg" alt=""/></span>${input.value}`;
   const divTaskImg = divTask.appendChild(document.createElement("img"));
   divTaskImg.classList = ("bg-transparent", "hidden");
-  divTaskImg.setAttribute("src", "../todo-app-main/images/icon-cross.svg");
+  divTaskImg.setAttribute("src", "../images/icon-cross.svg");
 
   const liSpan = divTaskLi.querySelector("span");
   const liImg = divTaskLi.querySelector("img");
@@ -176,10 +176,10 @@ function getDragAfterElement(container, y) {
 themeIcon.addEventListener("click", () => {
   isDark = !isDark;
   if (isDark) {
-    themeIcon.setAttribute("src", "../todo-app-main/images/icon-moon.svg");
+    themeIcon.setAttribute("src", "../images/icon-moon.svg");
     body.classList.replace("light", "dark");
   } else {
-    themeIcon.setAttribute("src", "../todo-app-main/images/icon-sun.svg");
+    themeIcon.setAttribute("src", "../images/icon-sun.svg");
     body.classList.replace("dark", "light");
   }
 });
