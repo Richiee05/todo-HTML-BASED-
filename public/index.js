@@ -54,20 +54,7 @@ function createTodoItem(input) {
 
   const liSpan = divTaskLi.querySelector("span");
   const liImg = divTaskLi.querySelector("img");
-
-  divTaskImg.addEventListener("click", () => {
-    divTask.remove();
-    todo_no--;
-    todoNo.textContent = todo_no;
-  });
-
-  divTask.addEventListener("mouseover", () => {
-    divTaskImg.classList.remove("hidden");
-  });
-  divTask.addEventListener("mouseleave", () => {
-    divTaskImg.classList.add("hidden");
-  });
-
+  
   divTask.addEventListener("click", () => {
     isChecked = !isChecked;
 
@@ -99,6 +86,21 @@ function createTodoItem(input) {
     }
     // getCompletedItems();
   });
+
+
+  divTaskImg.addEventListener("click", () => {
+    divTask.remove();
+    todo_no--;
+    todoNo.textContent = todo_no;
+  });
+
+  divTask.addEventListener("mouseover", () => {
+    divTaskImg.classList.remove("hidden");
+  });
+  divTask.addEventListener("mouseleave", () => {
+    divTaskImg.classList.add("hidden");
+  });
+
 
   divTask.addEventListener("dragend", () => {
     divTask.classList.remove("opacity-50", "dragging");
