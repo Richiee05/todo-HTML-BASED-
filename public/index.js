@@ -54,7 +54,7 @@ function createTodoItem(input) {
 
   const liSpan = divTaskLi.querySelector("span");
   const liImg = divTaskLi.querySelector("img");
-  
+
   divTask.addEventListener("click", () => {
     isChecked = !isChecked;
 
@@ -87,7 +87,6 @@ function createTodoItem(input) {
     // getCompletedItems();
   });
 
-
   divTaskImg.addEventListener("click", () => {
     divTask.remove();
     todo_no--;
@@ -100,7 +99,6 @@ function createTodoItem(input) {
   divTask.addEventListener("mouseleave", () => {
     divTaskImg.classList.add("hidden");
   });
-
 
   divTask.addEventListener("dragend", () => {
     divTask.classList.remove("opacity-50", "dragging");
